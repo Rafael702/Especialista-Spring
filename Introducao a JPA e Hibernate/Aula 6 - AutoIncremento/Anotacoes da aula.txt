@@ -1,0 +1,3 @@
+Geração de autoincremento do id.
+
+@GeneratedValue(strategy = GenerationType.IDENTITY)
