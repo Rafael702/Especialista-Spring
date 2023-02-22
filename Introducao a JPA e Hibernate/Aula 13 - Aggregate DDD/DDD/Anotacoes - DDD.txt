@@ -1,0 +1,3 @@
+Abrtigate -> é um conjunto de objetos de dominio que podem ser tratado como unica unidade.
+
+https://martinfowler.com/bliki/DDD_Aggregate.html
