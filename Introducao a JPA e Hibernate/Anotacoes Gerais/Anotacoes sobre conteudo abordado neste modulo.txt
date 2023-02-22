@@ -1,0 +1,25 @@
+EntityManager -> Gerencia o contexto de persistencia.
+
+@PersistenteContext -> Injeta o EntityManager
+
+JPQL -> Linguagem de consulta do JPA
+
+ApplicationContext -> Interface que gerencia o contexto da aplicação.
+SpringApplicationBuilder -> Construtor Padrão de Objetos
+
+Estamos usando para informar que a classe não vai subir uma aplicação Web.
+SpringApplicationBuilder() passamos uma classe que tenha a anotação 
+@SpringBootApplication para deixarmos algumas configurações base do Spring na classe.
+
+.web(WebApplicationType.NONE) -> Não é uma aplicação Web
+
+@Transactional -> O método será executado dentro de uma transação.
+
+A Repository é por agregado.
+Criamos repository por Aggregate root
+
+@EqualsAndHashCode(onlyExplicitlyIncluded = true) -> Só vai incluir ao EqualsAndHashCode os atributos que deixarmos explicitos.
+Para deixar explicito: @EqualsAndHashCode.Include -> Colocamos em cima do atributo:
+    @EqualsAndHashCode.Include
+    @Id
+    private Long id;

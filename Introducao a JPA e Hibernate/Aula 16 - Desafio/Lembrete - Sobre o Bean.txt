@@ -1,0 +1,2 @@
+Para o getBean da classe principal funcionar é necessário que a classe esteja mapeada com um Bean.
+Seja a classe ou a classe que implementa.
