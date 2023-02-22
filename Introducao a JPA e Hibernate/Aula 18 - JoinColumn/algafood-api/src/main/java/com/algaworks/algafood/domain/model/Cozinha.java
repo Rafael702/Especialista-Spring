@@ -1,23 +1,21 @@
 package com.algaworks.algafood.domain.model;
 
-import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import java.math.BigDecimal;
+import javax.persistence.Table;
 
+@Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Entity
-public class Restaurante {
+public class Cozinha {
 
     @EqualsAndHashCode.Include
     @Id
@@ -25,12 +23,4 @@ public class Restaurante {
     private Long id;
 
     private String nome;
-
-    @Column(name = "taxa_frete")
-    private BigDecimal taxaFrete;
-
-    @ManyToOne //Muitos restaurante possuem uma cozinha
-    @JoinColumn(name = "cozinha_id")
-    private Cozinha cozinha;
-
 }
