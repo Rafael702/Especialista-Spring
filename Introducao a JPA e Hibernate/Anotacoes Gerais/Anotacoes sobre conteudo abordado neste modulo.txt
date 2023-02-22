@@ -23,3 +23,7 @@ Para deixar explicito: @EqualsAndHashCode.Include -> Colocamos em cima do atribu
     @EqualsAndHashCode.Include
     @Id
     private Long id;
+
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect -> Muda o Dialeto do Hibernate para o do MySQL. Cada Banco possui o seu dialeto. Basta procurar nas bibliotecas da dependencia.
+InnoDb
