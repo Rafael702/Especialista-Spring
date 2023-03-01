@@ -1,0 +1,20 @@
+Recursos do Rest - 
+
+Recurso - Qualquer coisa disponibilizada na Web
+
+Singleton Resource - Um único produto é um recurso
+
+Coleções de produtos é um recurso - Collection Resource
+
+Identificando Recursos -
+O rest usa uri para identificar os recursos -> URI -> Uniform Resource Identifier (Identificador de recurso uniforme) -> Conjunto de caracteres que tem como objetivo dar um endereço para os endereços de forma não ambigua.
+
+URI e URL -> URL é um tipo de URI. URL - Uniform Resource Locator (Localizador de recurso uniforme),
+não só identifica o recurso, mas o seu local. https:google.com.br -> Idetificando recurso e como chegar nele.
+
+	
+/listarProdutos -> Má Prática. Uma URI não deve ter verbos, pois verbos não possuem propriedade. Devemos usar um substantivo, pois coisas possuem propriedades.
+/produtos
+Para usar os verbos, utilizamos os verbos HTTP -> PEGAR (GET), SALVAR(POST), ATUALIZAR(PUT) e etc...
+
+/produtos/{codigo} -> Ideal é usar nomes no plural.
