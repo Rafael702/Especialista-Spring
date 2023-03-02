@@ -1,5 +1,8 @@
 package com.algaworks.algafood.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -12,16 +15,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//@JsonRootName("cozinha") -> Nome da raiz
 @Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Cozinha {
 
     @EqualsAndHashCode.Include
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonProperty("titulo")
     @Column(nullable = false)
     private String nome;
 }

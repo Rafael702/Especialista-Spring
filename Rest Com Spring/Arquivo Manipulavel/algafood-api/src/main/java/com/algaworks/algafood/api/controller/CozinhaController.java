@@ -30,6 +30,8 @@ public class CozinhaController {
     public List<Cozinha> listarNoFormatoXml() {
         return cozinhaRepository.listar();
     }
+
+
     @GetMapping("/{cozinhaId}")
     public Cozinha buscar(@PathVariable("cozinhaId") Long id) {
         return cozinhaRepository.buscar(id);
