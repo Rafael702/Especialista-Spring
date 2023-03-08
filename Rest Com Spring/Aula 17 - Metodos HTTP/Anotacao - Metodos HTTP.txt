@@ -1,0 +1,17 @@
+Método seguro:
+Não altera o recurso. Get
+É idepotente
+
+PUT - Sempre altera o recurso todo. Create or Update. É usado apenas para atualizar. O PUT é idempotente, pois sempre retorna o mesmo resultado da requisição inicial, mesmo que isso seja feito várias vezes.
+
+Delete - Deleta um recurso. É idepotente, pois não traz efeito colateral
+
+Método Inseguro:
+Altera o recurso. POST, PUT
+
+
+PACTH -> Atualiza um recurso parcialmente. Queremos atualizar o valor de um produto, sendo assim o mais cabível é usar o PATCH. Ele não é idepotente e não é seguro.
+
+HEAD -> Nâo retorna o corpo da resposta, apenas busca o cabeçalho. Serve pra testar a existência de uma uri, se um media type é aceito. Não tem relação com criar, atualizar ou excluir recursos.
+
+Options -> Não tem relação com criar, atualizar ou excluir recursos. É usado pra retornar uma lista de métodos em um determinado recurso.
