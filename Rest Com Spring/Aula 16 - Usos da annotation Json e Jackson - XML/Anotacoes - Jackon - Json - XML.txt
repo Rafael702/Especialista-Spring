@@ -1,0 +1,28 @@
+Modelo de representação como um wrapper
+
+@NonNull -> Vai gerar o construtor da classe, pois com o @Data no Lombock será gerado o construtor da class, desde que seja especificado. E especificamos com o @NonNull
+
+@JacksonXmlElementWrapper -> Embrulha e desembrulha
+@JacksonXmlElementWrapper(useWrapping = false)
+
+<cozinhas>
+	<cozinha>
+		embrulho
+		<cozinha>
+			
+		</cozinha>
+		<cozinha>
+			embrulho
+		</cozinha>
+	</cozinha>
+</cozinhas>
+
+Sem o embrulho:
+<cozinhas>
+	<cozinha>
+		<titulo>Tailandesa</titulo>
+	</cozinha>
+	<cozinha>
+		<titulo>Indiana</titulo>
+	</cozinha>
+</cozinhas>

@@ -2,7 +2,6 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
-import com.algaworks.algafood.model.CozinhasRepresentationModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,10 +27,9 @@ public class CozinhaController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
-    public CozinhasRepresentationModel listarXml() {
-        return new CozinhasRepresentationModel(cozinhaRepository.listar());
+    public List<Cozinha> listarNoFormatoXml() {
+        return cozinhaRepository.listar();
     }
-
     @GetMapping("/{cozinhaId}")
     public Cozinha buscar(@PathVariable("cozinhaId") Long id) {
         return cozinhaRepository.buscar(id);
