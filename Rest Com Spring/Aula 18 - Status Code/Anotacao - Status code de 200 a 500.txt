@@ -1,0 +1,30 @@
+APIS fáceis de ser consumidas.
+Código de status HTTP facilita isso.
+
+Toda resposta deve retornar o status HTTP, informando se a requisição foi de sucesso ou de erro.
+
+Niveis de status:
+Nivel 200 - Sucesso. Todos
+
+200 - OK
+201 - Recurso Criado com sucesso
+204 - Sem conteúdo, mas houve sucesso. Usado para exclusão de recursos.
+
+Nivel 300 -  Status de redirecionamento
+301 - Movido Permanenete. Os recursos são direcionados de acordo com o que foi fornecido no cabeçalho da resposta. Redirect permanente. Deve existir um cabeçalho com o nome Location, informando a uri de redirecionamento. Isso deve ser feito no cabeçalho da resposta.
+
+302 - Encontrado. O Recurso existe, mas foi redirecionado temporariamente. Neste caso, deve existir um cabeçalho com o nome Location também, informando a uri.
+
+Nivel 400 - Erro por parte do cliente.
+400 - Requisição mal feita. 
+401 - Client não está autenticado
+403 - Proibido
+404 - Não encontrado
+405 - Método não suportado
+406 - Não aceito. Media Type
+
+Nivel 500 - Erro do servidor.
+500 - Erro interno no servidor.
+503 - Serviço indisponivel. Está em manutenção ou está sobrecarregado.
+
+Usar os status de forma correta.
