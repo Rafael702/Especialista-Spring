@@ -1,0 +1,9 @@
+O Ideal é retornar 200 OK para requisição que retornam o corpo da resposta com uma lista vazia, pois a requisição ocorreu da forma esperada.
+
+204 não é o ideal, pois, não estamos retornando uma requisicao sem conteudo.
+Se existe uma lista vazia sendo retornada, temos conteudo no body da resposta.
+
+Nivel 400 -> Não é o ideal para este caso, pois não foi o erro do cliente.
+404 -> Não é o ideal pois, se o recurso existe e está mapeado na api não se trataria de um erro nem nada do tipo.
+
+Sendo assim, o ideal é de ficarmos com o 200. Uma sugestão interessante é de, retornar no corpo da resposta ou no cabeçalho da resposta a uri para fazer o cadastro de objetos.
