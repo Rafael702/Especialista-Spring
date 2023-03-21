@@ -1,0 +1,7 @@
+No DDD existe um conceito chamada: Domain Service (Serviço de Dominio)
+
+Domain Service -> É uma operação sem estado e realiza uma tarefa especifica do dominio, ou seja, uma tarefa de negócio.
+
+Quando um processo no dominio não é uma responsabilidade natural da entidade, nós criamos um serviço de dominio.
+
+Linguagem Obliqua - Lingua Comum
