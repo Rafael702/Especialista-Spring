@@ -7,7 +7,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
-public class RemoveCozinhaMain {
+public class AlteracaoCozinhaMain {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
@@ -18,7 +18,11 @@ public class RemoveCozinhaMain {
 
         Cozinha cozinha = new Cozinha();
         cozinha.setId(1L);
+        cozinha.setNome("Brasileira");
 
-        cozinhaRepository.remover(cozinha.getId());
+        cozinhaRepository.salvar(cozinha);
+
+
+        System.out.printf("%d - %s\n", cozinha.getId(), cozinha.getNome());
     }
 }

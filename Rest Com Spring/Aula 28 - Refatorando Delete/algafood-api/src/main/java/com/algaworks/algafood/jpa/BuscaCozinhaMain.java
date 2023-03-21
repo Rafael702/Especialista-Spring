@@ -7,7 +7,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
-public class RemoveCozinhaMain {
+public class BuscaCozinhaMain {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
@@ -16,9 +16,8 @@ public class RemoveCozinhaMain {
 
         CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
 
-        Cozinha cozinha = new Cozinha();
-        cozinha.setId(1L);
+        Cozinha cozinha = cozinhaRepository.buscar(1L);
 
-        cozinhaRepository.remover(cozinha.getId());
+        System.out.println(cozinha.getNome());
     }
 }
