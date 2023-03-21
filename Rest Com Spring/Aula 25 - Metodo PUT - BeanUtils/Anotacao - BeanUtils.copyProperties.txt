@@ -1,0 +1,5 @@
+BeanUtils.copyProperties(Object source, Object target) -> Copia os valores das propriedades de um objeto para as propriedades de outro objeto.
+ 
+BeanUtils.copyProperties(Object source, Object target, String... ignoreProperties) -> Podemos ignorar uma propriedade do objeto.
+Exemplo:
+BeanUtils.copyProperties(cozinha, cozinhaAtual, "id");
