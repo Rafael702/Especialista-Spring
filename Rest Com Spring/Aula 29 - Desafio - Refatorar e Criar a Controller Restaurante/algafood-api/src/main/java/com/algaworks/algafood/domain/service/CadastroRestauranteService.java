@@ -2,6 +2,7 @@ package com.algaworks.algafood.domain.service;
 
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.model.Restaurante;
+import com.algaworks.algafood.domain.repository.RestauranteRepository;
 import com.algaworks.algafood.infraestructure.repository.RestauranteRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import java.util.List;
 public class CadastroRestauranteService {
 
     @Autowired
-    private RestauranteRepositoryImpl restauranteRepository;
+    private RestauranteRepository restauranteRepository;
 
     public List<Restaurante> listarRestaurantes(){
         return restauranteRepository.listar();
