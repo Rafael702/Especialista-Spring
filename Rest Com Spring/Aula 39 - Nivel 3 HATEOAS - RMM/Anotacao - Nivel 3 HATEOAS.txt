@@ -1,0 +1,9 @@
+Nivel 3 - HATEOAS
+HATEOAS - Hypertext as The Engine Of Application State ou Hyper Mydia
+
+Recursos interligados.
+Ajudar os consumidores no uso da api.
+
+Root Entry Point / - Ponto de entrada raiz
+
+Basicamente a api passa links para a exploração da api. Ou seja, a api sendo o guia de si mesma.

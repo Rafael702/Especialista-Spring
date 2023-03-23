@@ -1,0 +1,6 @@
+Nivel 0 - POX (Plain Old Xml) - Nivel Rudimentar - Não é considerado Rest.
+Usa o protocolo HTTP apenas como mecanismo de transporte de dados, não usa os verbos nem os status HTTP conforme o protocolo.
+
+RPC (Remote Procedure Invocation) - Chamadas de Procedimentos Remotos.
+Uma API dessa usa apenas um endpoint
+	

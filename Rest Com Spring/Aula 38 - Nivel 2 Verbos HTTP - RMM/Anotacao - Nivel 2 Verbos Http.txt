@@ -1,0 +1,7 @@
+Nivel 2 - Verbos Http
+uso dos verbos Http de acordo com a sua semântica e o uso correto dos status Https
+
+Não definimos os niveis de maturidade da api rest pelo payload, e sim pelos recursos, verbos e status
+Exemplo: 201 - Não é OK e sim CREATED.
+404 - Não é OK ou Bad Request, mas Not Found.
+O Nivel 2 já pode ser considerado uma api rest (pelos programadores pragmáticos), os puristas não consideram.

@@ -1,0 +1,9 @@
+Modelo de Maturidade de Richardson
+
+4 niveis 
+Nivel 0 - POX
+Nivel 1 - Recursos
+Nivel 2 - Verbos Http
+Nivel 3 - HATEOAS
+
+De acordo com Morfelden uma API só pode ser considerada REST se estiver no Nivel 3. A Maioria das API's Estão no nivel 2.

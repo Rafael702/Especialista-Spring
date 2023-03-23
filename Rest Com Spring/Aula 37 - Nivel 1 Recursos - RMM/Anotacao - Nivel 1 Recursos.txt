@@ -1,0 +1,3 @@
+Nivel 1 - Recursos
+Identificação de Recursos - uso correto. Exemplo: /produtos ao invés de /produto
+Não se usa adequadamente os verbos HTTP's e Status HTTP.
