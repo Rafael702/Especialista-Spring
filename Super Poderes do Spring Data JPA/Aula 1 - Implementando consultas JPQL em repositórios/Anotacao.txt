@@ -1,0 +1,4 @@
+@Repository - Lança exceções do Spring
+
+like -> Contém parte do nome.
+% -> Coringa.
