@@ -16,26 +16,30 @@ public class CadastroCidadeService {
     private CidadeRepository cidadeRepository;
 
     public List<Cidade> listarCidade() {
-        return cidadeRepository.findAll();
+        return cidadeRepository.listar();
     }
 
     public Cidade buscarCidade(Long id) {
-        Cidade cidade = cidadeRepository.findById(id).orElseThrow(() -> new EntidadeNaoEncontradaException(
-                String.format(
-                        "Nao existe um cadastro de cidade com o codigo: %d", id
-                )
-        ));
+        Cidade cidade = cidadeRepository.buscar(id);
+
+        if (cidade == null) {
+            throw new EntidadeNaoEncontradaException(
+                    String.format(
+                            "Nao existe um cadastro de cidade com o codigo: %d", id
+                    )
+            );
+        }
 
         return cidade;
     }
 
     public Cidade salvarCidade(Cidade cidade) {
-        return cidadeRepository.save(cidade);
+        return cidadeRepository.salvar(cidade);
     }
 
     public void excluirCidade(Long id) {
         try {
-            cidadeRepository.deleteById(id);
+            cidadeRepository.remover(id);
         } catch (EmptyResultDataAccessException ex) {
             throw new EntidadeNaoEncontradaException(
                     String.format(
