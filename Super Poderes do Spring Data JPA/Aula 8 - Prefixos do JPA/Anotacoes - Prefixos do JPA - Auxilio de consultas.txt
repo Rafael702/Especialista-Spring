@@ -1,0 +1,20 @@
+Prefixos que podem ser usados do JPA para criação novas consultas:
+find, read, get, query ,stream -> Todos tem o funcionamento igual.
+
+Prefixo - Palavra chave
+First é uma palavra chave do JPA. O segundo prefixo não precisa ser qualquer coisa, pode ser uma palavra chave também, neste caso o first.
+De:
+findQualquerCoisaByPropriedadeQualquer()
+
+Para:
+findFirstByPropridadeQualquer()
+Ou:
+findFirstByPropridadeQualquerContaining();
+
+Top é outro prefixo reservado do JPA. Top serve pra indicar as primeiras informações que a consulta pode retornar. Essas "primeiras" podem ser determinadas depois do Top.
+Exemplo:
+findTop2ByPropridadeQualquerContaining();
+
+outro prefixo usado no JPA é o exists e o count:
+existsByNome(String nome);
+countByCozinhaId(Long cozinhaId);
