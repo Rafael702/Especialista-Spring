@@ -1,0 +1,4 @@
+consulta usando like e %% no JPA, pode ser usado através da KeyWord -> containing
+findQualqueCoisaByPropriedadeQualquerContaining
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
