@@ -1,0 +1,7 @@
+findBy -> É um dos critérios do JPA para ser criado um método novo. E tem que ter o nome do Atributo.
+
+findByPropriedadeQualquer
+findQualquerCoisaByPropriedadeQualquer
+
+@RequestParam
+O bynd já é feito para os parametros da requisição
