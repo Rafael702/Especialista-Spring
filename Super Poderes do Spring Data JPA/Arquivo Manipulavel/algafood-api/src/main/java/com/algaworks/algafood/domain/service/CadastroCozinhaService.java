@@ -19,12 +19,12 @@ public class CadastroCozinhaService {
     private CozinhaRepository cozinhaRepository;
 
     public Cozinha salvar(Cozinha cozinha) {
-        return cozinhaRepository.salvar(cozinha);
+        return cozinhaRepository.save(cozinha);
     }
 
     public void excluir(Long id) {
         try {
-            cozinhaRepository.remover(id);
+            cozinhaRepository.deleteById(id);
         } catch (EmptyResultDataAccessException ex) {
             throw new EntidadeNaoEncontradaException(
                     String.format(
@@ -41,17 +41,13 @@ public class CadastroCozinhaService {
     }
 
     public List<Cozinha> listarCozinhas() {
-        return cozinhaRepository.listar();
+        return cozinhaRepository.findAll();
     }
 
     public Cozinha buscarCozinha(Long id) {
-        Cozinha cozinha = cozinhaRepository.buscar(id);
-
-        if (cozinha == null) {
-            throw new EntidadeNaoEncontradaException(String.format(
-                    "Nao existe um cadastro de cozinha com o codigo: %d", id
-            ));
-        }
+        Cozinha cozinha = cozinhaRepository.findById(id).orElseThrow(() -> new EntidadeEmUsoException(
+                String.format("Nao existe um cadastro de cozinha com o codigo: %d", id)
+        ));
 
         return cozinha;
     }
@@ -61,6 +57,6 @@ public class CadastroCozinhaService {
 
         BeanUtils.copyProperties(updateCozinha, cozinhaASerAtualizada, "id");
 
-        return cozinhaRepository.salvar(cozinhaASerAtualizada);
+        return salvar(cozinhaASerAtualizada);
     }
 }
