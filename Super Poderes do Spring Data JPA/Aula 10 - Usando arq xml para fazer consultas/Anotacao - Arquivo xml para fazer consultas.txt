@@ -1,0 +1,22 @@
+META-INF -> Arquivos de Meta informações
+
+podemos usar um arquivo xml.
+
+Para concatenar no xml, é usado o concat().
+Para criar querys de consulta, usamos a tag: <named-query>
+
+ <named-query name="">
+        <query></query>
+    </named-query>
+
+Exemplo de uso:
+    <named-query name="Cozinha.consultarPorNome">
+        <query>
+            from Cozinha
+            where nome like concat('%',:nome, '%')
+        </query>
+    </named-query>
+
+no name, passamos a tabela/entidade que estamos usando para fazer consultas mais o método que criamos para fazer consultas. Na tag query, passamos a consulta.
+
+Este meio foi usado para deixar o nome mais enxuto e objetivo.
