@@ -1,0 +1,1 @@
+CriteriaQuery -> Construtor de clausulas

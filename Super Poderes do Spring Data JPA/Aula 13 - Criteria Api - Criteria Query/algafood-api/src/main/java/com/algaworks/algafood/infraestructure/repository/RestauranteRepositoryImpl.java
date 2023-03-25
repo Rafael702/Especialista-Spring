@@ -9,8 +9,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -29,12 +27,7 @@ public class RestauranteRepositoryImpl implements RestauranteRepositoryQueries {
         CriteriaQuery<Restaurante> criteria = builder.createQuery(Restaurante.class);
 
         //clausula
-        Root<Restaurante> root = criteria.from(Restaurante.class); //from Restaurante
-
-        Predicate nomePredicate = builder.like(root.get("nome"), "%" + nome + "%");
-        Predicate taxaInicialPredicate = builder.greaterThanOrEqualTo(root.get("taxaFrete"), taxaFreteInicial); //maior que ou igual a
-        Predicate taxaFinalPredicate = builder.lessThanOrEqualTo(root.get("taxaFrete"), taxaFreteFinal); //menor que ou igual a
-        criteria.where(nomePredicate, taxaInicialPredicate, taxaFinalPredicate);
+        criteria.from(Restaurante.class); //from Restaurante
 
         TypedQuery<Restaurante> query = entityManager.createQuery(criteria);
 
