@@ -1,0 +1,12 @@
+Specification -> Faz parte do conceito do DDD
+
+Exemplo do que seria o specification:
+ @GetMapping("restaurantes/com-frete-gratis")
+    public int restaurantesComFreteGratis(String nome) {
+        var comFreteGratis = new RestauranteComFreteGratisSpec();
+        var comNomeSemelhante = new RestauranteComNomeSemelhanteSpec();
+
+        return restauranteRepository.findAll(comFreteGratis.and(comNomeSemelhante));
+    }
+
+Ou seja, para cada necessidade que tivemos, podemos usar uma classe que atenda as nossas especificações como RestauranteRepositoryImpl
