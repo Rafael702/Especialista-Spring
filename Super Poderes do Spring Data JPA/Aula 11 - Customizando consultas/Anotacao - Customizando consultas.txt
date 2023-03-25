@@ -1,0 +1,3 @@
+No JPA podemos customizar as query em classes diferentes.
+Podemos criar o contrato em uma interface e customizar a consulta em uma classe diferente.
+No JPA temos nomeclaturas e se seguirmos criando uma classe com a nomeclatura RepositoryImpl.
