@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 import java.util.Optional;
 
-public interface CozinhaRepository extends CustomJpaRepository<Cozinha, Long> {
+public interface CozinhaRepository extends JpaRepository<Cozinha, Long> {
     List<Cozinha> findAllByNomeContaining(String nome);
 
 //    @Query("from Cozinha where nome like %:nome%")

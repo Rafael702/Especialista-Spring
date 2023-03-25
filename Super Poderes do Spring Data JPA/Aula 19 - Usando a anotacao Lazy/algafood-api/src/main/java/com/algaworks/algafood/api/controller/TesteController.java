@@ -30,9 +30,8 @@ public class TesteController {
     }
 
     @GetMapping("/cozinhas/unico-nome")
-    public Optional<Cozinha> cozinhaPorNome() {
-//        return cozinhaRepository.consultarPorNome(nome);
-        return cozinhaRepository.buscarPrimeiro();
+    public Optional<Cozinha> cozinhaPorNome(String nome) {
+        return cozinhaRepository.consultarPorNome(nome);
     }
 
     @GetMapping("/cozinhas/exists")
@@ -56,9 +55,8 @@ public class TesteController {
     }
 
     @GetMapping("/restaurantes/por-nome-primeiro")
-    public Optional<Restaurante> restaurantePorNome() {
-//        return restauranteRepository.findFirstRestauranteByNomeContaining(nome);
-        return restauranteRepository.buscarPrimeiro();
+    public Optional<Restaurante> restaurantePorNome(String nome) {
+        return restauranteRepository.findFirstRestauranteByNomeContaining(nome);
     }
 
     @GetMapping("/restaurantes/top-nome-primeiros")
