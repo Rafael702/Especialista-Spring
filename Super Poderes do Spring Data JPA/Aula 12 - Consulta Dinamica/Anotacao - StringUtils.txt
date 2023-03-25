@@ -1,0 +1,2 @@
+StringUtils -> classe utilitaria para trabalhar com Spring.
+Tem o método hashLength -> Verifica se o tamanho da String é maio que zero.
